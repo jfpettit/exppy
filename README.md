@@ -31,3 +31,17 @@ For example, print out the help message from the Optuna RL code:
 ```bash
 python -m exppy.optuna_rl --help
 ```
+
+### Usage in files
+
+You can import from the `exppy` module like a normal python package:
+
+```python
+from exppy.atari_mask import ImageObsMask
+from exppy.optuna_rl import Runner, run_policy, video_rollout
+import gym
+
+env = gym.make("BreakoutNoFrameskip-v4")
+env = ImageObsMask(env)
+```
+
